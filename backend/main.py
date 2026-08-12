@@ -34,7 +34,11 @@ async def lifespan(app: FastAPI):
     yield
     # Szerver leállásakor lefutó rész (ide most nem kell semmi)
 
+from api.endpoints import router as api_router
+
 app = FastAPI(title="Parkolóhely-foglalás API", lifespan=lifespan)
+
+app.include_router(api_router, prefix="/api")
 
 @app.get("/health")
 def health_check():
