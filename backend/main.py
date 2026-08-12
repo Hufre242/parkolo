@@ -40,6 +40,14 @@ app = FastAPI(title="Parkolóhely-foglalás API", lifespan=lifespan)
 
 app.include_router(api_router, prefix="/api")
 
-@app.get("/health")
-def health_check():
-    return {"status": "ok", "message": "A rendszer fut, adatbázis inicializálva!"}
+@app.get("/")
+def root_info():
+    return {
+        "message": "Üdvözöllek a Parkolóhely-foglalás API-ban!",
+        "instructions": "A rendszer interaktív dokumentációját és tesztelési felületét a /docs útvonalon találod.",
+        "endpoints": {
+            "dokumentacio": "/docs",
+            "parkolohelyek_lekerdezese": "/api/spots",
+            "foglalasok_lekerdezese_es_letrehozasa": "/api/bookings"
+        }
+    }
