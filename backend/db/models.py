@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Enum
 from sqlalchemy.orm import relationship
 import enum
-from database import Base
+from db.database import Base
 
 # Az extra feladat miatti típusok (pl. normál, mozgáskorlátozott, elektromos töltő)
 class SpotType(str, enum.Enum):

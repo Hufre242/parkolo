@@ -32,7 +32,7 @@ async def lifespan(app: FastAPI):
     # Szerver indulásakor lefutó rész
     seed_database()
     yield
-    # Szerver leállásakor lefutó rész (ide most nem kell semmi)
+    # Szerver leállásakor lefutó rész 
 
 from api.endpoints import router as api_router
 
