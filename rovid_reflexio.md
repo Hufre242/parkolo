@@ -1,0 +1,4 @@
+## 2. Rövid reflexió
+
+Őszintén szólva az egész feladat elsőre nehéznek tűnt, de az AI segítségével a végére már nem volt az. Dockerben voltak ütközések, és a teszteléssel is akadt egy kis gond, de azokat is az AI segített helyrerakni. Na persze ő volt az, aki eleinte rosszul oldotta meg őket, illetve nem írt minden funkcióra tesztet, csak amikor külön kértem.
+
